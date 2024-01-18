@@ -1,10 +1,11 @@
-import { Redirect, Route } from "react-router-dom";
+import { Redirect, Route, useLocation } from "react-router-dom";
 import {
   IonApp,
   IonHeader,
   IonIcon,
   IonLabel,
   IonRouterOutlet,
+  IonTab,
   IonTabBar,
   IonTabButton,
   IonTabs,
@@ -39,71 +40,38 @@ import "./theme/variables.css";
 import Discound from "./pages/Discound/Discound";
 import CustomerService from "./pages/CustomerService/CustomerService";
 import Order from "./pages/Order/Order";
-import Header from "./components/Header";
-import tabData from "./utils/tabData";
-import { useState } from "react";
+import Profile from "./pages/Profile/Profile";
+import AccountDetails from "./components/AccountInfo/AccountDetails";
 
 setupIonicReact();
 
 const App: React.FC = () => {
-  const [pathName, setPathName] = useState("/home");
-  // useEffect(() => {
-  //   console.log(window.location.pathname);
-
-  //   setPathName(window.location.pathname);
-  // }, [window.location.pathname]);
-  // const routeChange = (): void => {};
-
   return (
     <IonApp
       style={{
         backgroundColor: "#EDF7FF",
       }}
     >
-      <IonReactRouter>
-        <Header />
-        <IonTabs>
-          <IonRouterOutlet>
-            <Redirect exact path="/" to="/home" />
+      {/* <IonTab> */}
+      <IonRouterOutlet>
+        <Redirect exact path="/" to="/home" />
 
-            <Route path="/home" render={() => <Home />} exact={true} />
-            <Route path="/discound" render={() => <Discound />} exact={true} />
-            <Route
-              path="/customer-service"
-              render={() => <CustomerService />}
-              exact={true}
-            />
-            <Route path="/order" render={() => <Order />} exact={true} />
-          </IonRouterOutlet>
-
-          <IonTabBar slot="bottom" className="main-tab">
-            {tabData.map((tab, index) => (
-              <IonTabButton
-                key={index}
-                tab={tab.slug}
-                href={`${tab.slug}`}
-                className="tab-button"
-                onClick={() => setPathName(tab.slug)}
-              >
-                {pathName === `${tab.slug}` ? (
-                  <img src={tab.activeIcon} alt="" height={30} width={30} />
-                ) : (
-                  <img src={tab.icon} alt="" height={30} width={30} />
-                )}
-                <IonLabel
-                  className={`${
-                    pathName === `${tab.slug}`
-                      ? "tab-label-active"
-                      : "tab-label"
-                  }`}
-                >
-                  {tab.title}
-                </IonLabel>
-              </IonTabButton>
-            ))}
-          </IonTabBar>
-        </IonTabs>
-      </IonReactRouter>
+        <Route path="/home" render={() => <Home />} exact={true} />
+        <Route path="/discound" render={() => <Discound />} exact={true} />
+        <Route
+          path="/customer-service"
+          render={() => <CustomerService />}
+          exact={true}
+        />
+        <Route path="/order" render={() => <Order />} exact={true} />
+        <Route path="/profile" render={() => <Profile />} exact={true} />
+        <Route
+          path="/profile/:title"
+          render={() => <AccountDetails />}
+          exact={true}
+        />
+      </IonRouterOutlet>
+      {/* </IonTab> */}
     </IonApp>
   );
 };

@@ -11,8 +11,6 @@ import {
 import React from "react";
 import logo from "../images/logo.png";
 import iconMessage from "../images/icons/message.png";
-import "./header.scss";
-import Home from "../pages/Home/Home";
 
 const Header: React.FC = () => {
   return (

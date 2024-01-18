@@ -1,0 +1,235 @@
+.header-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.header-end {
+  text-align: end;
+  padding-right: 8px;
+}
+
+.top-status {
+  border-radius: 16px;
+  background: linear-gradient(
+    180deg,
+    #5dadff 13.89%,
+    #4886fc 64.19%,
+    #447ffb 91.47%
+  );
+  box-shadow: 0px 4px 16px 0px rgba(36, 138, 251, 0.5),
+    0px 0px 36px 0px rgba(255, 255, 255, 0.1) inset;
+  /* max-width: 347px; */
+  width: 100%;
+  height: 130px;
+  flex-shrink: 0;
+  color: #fff;
+  padding: 17px;
+  margin: 14px auto;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.status-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 12px;
+  padding-top: 12px;
+}
+.status-stroke {
+  height: 24px;
+  width: 1.2px;
+  background: #fff;
+  margin: 0 10px;
+}
+.status-right {
+  padding-top: 15px;
+}
+.status-right button {
+  /* width: 76px; */
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 6px;
+  color: #fff;
+  font-family: Sacramento;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  gap: 4px;
+}
+
+.toggler,
+.toggle-two-head {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eaeaf3;
+}
+.toggler span {
+  padding-left: 4px;
+  color: #616783;
+  font-family: Sacramento;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.toggler-body {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px 0;
+}
+.toggle-one-hidden {
+  display: none;
+}
+
+.toggler-body .t-item {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* margin: 11px 0; */
+}
+.toggler-body .t-item h4 {
+  color: #949ab6;
+  font-family: Sacramento;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.toggler-body .t-item p {
+  color: #9fa4bd;
+  font-family: Sacramento;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.toogle-two {
+  background-color: #fff;
+}
+
+.toggle-two-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.toggle-2-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 25px 0;
+}
+.toggle-2-body .middle {
+  width: 273px;
+}
+.toggle-2-body .middle .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #f2f2f6;
+}
+.toggle-2-body .middle .item .item-left {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 16px;
+}
+.toggle-2-body .middle .item h4 {
+  color: #303442;
+  font-family: Sacramento;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.toggle-2-body .middle .item span {
+  border-radius: 2px;
+  background: #e7f5ff;
+  color: #5995fc;
+  font-family: Sacramento;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.toggle-2-body .middle .item:last-child span {
+  background-color: #edf7f0;
+  color: #4ab06a;
+}
+.last-2 h4 {
+  color: #303442;
+  font-family: Sacramento;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-top: 27px;
+}
+.last-2 .last-2-div {
+  border-radius: 4px;
+  background: #edf7ff;
+  border-radius: 4px;
+  background: #edf7ff;
+  padding: 12px 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12px;
+  width: 100%;
+  margin: 15px auto;
+}
+.last-2 .last-2-div h4 {
+  color: #999;
+  font-family: Sacramento;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.last-2-div p {
+  color: #5995fc;
+  font-family: Sacramento;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.last-2 button {
+  border-radius: 6px;
+  background: linear-gradient(270deg, #3d73fa 0.6%, #61b2ff 100%);
+  width: 100%;
+  color: #fff;
+  font-family: Sacramento;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 12px 0;
+}
+.bottom-text {
+  text-align: center;
+  padding-top: 20px;
+  color: #6c7ba8;
+  font-family: Sacramento;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
