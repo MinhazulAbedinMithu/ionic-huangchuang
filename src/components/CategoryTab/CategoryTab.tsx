@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { categoryBodyData, categoryTitleData } from "./categoryData";
 import { IonCol, IonGrid, IonRow } from "@ionic/react";
+import PopupModal from "../PopupModal/PopupModal";
 
 const CategoryTab: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("");
@@ -8,17 +9,19 @@ const CategoryTab: React.FC = () => {
   useEffect(() => {
     setActiveTab(categoryTitleData[0].title);
   }, []);
+  // const [isModalOpen, setIsModalOpen] = useState(true);
+  // const onClose = () => {
+  //   setIsModalOpen(!isModalOpen);
+  // };
+  const handleClick = () => {
+    window.location.replace(`/modal`);
+  };
 
   return (
     <IonGrid>
       <IonRow
         className="ion-justify-content-between"
         style={{
-          //   "--ion-grid-padding": "10px",
-          //     width: "100%",
-          //     display: "flex",
-          //     alignItems: "center",
-          //     justifyContent: "space-between",
           gap: "12px",
           padding: "10px 0",
         }}
@@ -35,7 +38,6 @@ const CategoryTab: React.FC = () => {
             <div
               key={tab.title}
               onClick={() => setActiveTab(tab.title)}
-              // className={`tab-title`}
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -63,16 +65,13 @@ const CategoryTab: React.FC = () => {
             </div>
           ))}
         </IonCol>
-        <IonCol
-        // style={{
-        //   width: "100%",
-        // }}
-        >
+        <IonCol>
           {categoryBodyData.map(
             (item) =>
               item.tags.includes(activeTab) && (
                 <div
                   key={item.title}
+                  onClick={handleClick}
                   style={{
                     backgroundColor: "#F3FAFF",
                     background: `url("${item.bg}") center center no-repeat`,

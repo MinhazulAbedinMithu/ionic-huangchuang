@@ -42,6 +42,7 @@ import CustomerService from "./pages/CustomerService/CustomerService";
 import Order from "./pages/Order/Order";
 import Profile from "./pages/Profile/Profile";
 import AccountDetails from "./components/AccountInfo/AccountDetails";
+import PopupModal from "./components/PopupModal/PopupModal";
 
 setupIonicReact();
 
@@ -70,6 +71,7 @@ const App: React.FC = () => {
           render={() => <AccountDetails />}
           exact={true}
         />
+        <Route path="/modal" render={() => <PopupModal />} exact={true} />
       </IonRouterOutlet>
       {/* </IonTab> */}
     </IonApp>
